@@ -7,7 +7,7 @@ getColorBtn.addEventListener('click', ()=>{
     const color = colorSelected.value.slice(1)
     const mode = modeSelected.value
     
-    fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`)
+    fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5&format=json`)
         .then(res => res.json())
         .then(data => {
             displayColors.innerHTML = ""
